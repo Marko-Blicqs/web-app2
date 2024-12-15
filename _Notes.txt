@@ -1,0 +1,65 @@
+1) Chat with fellow students on our PythonHow Discord channel using the invitation link below:
+        https://discord.gg/pythonhow-862322959648948225
+
+2) Complete list of Python modules:
+        https://docs.python.org/3/py-modindex.html
+
+3) Four important modules
+    csv         - Write and read tabular data to and from delimited files
+    glob        - Unix shell style pathname pattern expansion
+    webbrowser  - Easy-to-use controller for web browsers
+    shutil      - High-level file operations, including copying
+
+4) A complete list of Python libraries
+    https:\pypi.org
+
+5) PySimpleGUI Cookbook - https://docs.pysimplegui.com/en/latest/cookbook/
+
+6) Daily Python Project (from this publisher): https://dailypythonprojects.substack.com
+
+7) Streamlit
+  Local URL: http://localhost:8501
+  Network URL: http://10.200.0.138:8501
+
+8) To create a "requirements.txt" file for a web project deployment:
+        pip freeze > requirements.txt
+   This file lists all the project dependencies.
+   Ensure your project ONLY includes files for this project.
+
+9) Other hosting options
+    https://www.udemy.com/course/the-python-mega-course/learn/lecture/34604042#notes
+    We examined Heroku
+
+ 10) List comprehensions - parsing each element ins an array/list
+     clean_content = [item.strip("\n") from item in content]
+
+     clean_content is a list of the amended values
+
+11) Create an app prototype with Figma (industry standard for prototyping)
+    https://www.udemy.com/course/the-python-mega-course/learn/lecture/34604106#notes
+    We added the Font Awesome Icons that provided a tick mark. Details are in KeyPassXC
+
+
+
+
+================================================================================================
+ERROR AND ISSUES
+================================================================================================
+1) Using FreeSimpleGUI
+   This would not run. Two solutions were proposed here (https://github.com/pypa/virtualenv/issues/93).
+
+   I solved this by setting the following environment variables in my activate script:
+    $env:TCL_LIBRARY = "C:\Python32\tcl\tcl8.5"
+    $env:TK_LIBRARY = "C:\Python32\tcl\tk8.5"
+
+   And, I took a similar approach by modifying my activate.bat script to include:
+
+    set TCL_LIBRARY=C:\Python26\ArcGIS10.0\tcl\tcl8.5
+    set TK_LIBRARY=C:\Python26\ArcGIS10.0\tcl\tk8.5
+
+    My activate.bat file:
+        C:\Users\marko.kennedy\PycharmProjects\TodoListApp\.venv\Scripts\activate.bat
+    I appended the following:
+
+    @set "TCL_LIBRARY=C:\Users\marko.kennedy\AppData\Local\Programs\Python\Python313\tcl\tcl8.6"
+    @set "TK_LIBRARY=C:\Users\marko.kennedy\AppData\Local\Programs\Python\Python313\tcl\tk8.6"
