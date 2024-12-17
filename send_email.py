@@ -1,17 +1,18 @@
 import smtplib, ssl
-
+import os
 
 def send_email(sender, message, subject, send_method="TLS"):
     receiver = "mkappdevtester@gmail.com"
     host = "smtp.gmail.com"
     gmail_user = "mkappdevtester@gmail.com"
-    gmail_pwd = "mvup rrgo cvrz eess".replace(" ", "")
+    gmail_pwd = str(os.getenv("python_email_pwd")).replace(" ", "")
     send_method = "TLS".upper() # TLS | SSL
 
     message = f"""\
 Subject: {subject}
 
 From: {sender}
+Topic: {subject}
 
 {message}
 """
